@@ -1,0 +1,8 @@
+{
+  "terraform_provider": "google",
+  "branch": "main",
+  "enable_webhooks": true,
+  "administrative": false,
+  "workflow_tool": "TERRAFORM_FOSS",
+  "labels": ["managed_by:terraform", "tier:internal", "org:clz"]
+}

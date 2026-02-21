@@ -1,0 +1,12 @@
+# Spacelift Module Registry Orchestrator Configuration
+version: 1
+
+stack_defaults:
+  # This applies to all stacks using this repository
+  administrative: true
+  project_root: ""
+  terraform_version: "1.5.7"
+
+  # Correct placement for hooks in the current schema
+  before_init:
+    - git config --global url."https://token:${ADO_PAT}@dev.azure.com".insteadOf "https://dev.azure.com"

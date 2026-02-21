@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Credentials & Secrets
+*.tfvars
+*.tfvars.json
+
+# OS/IDE
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+*.log

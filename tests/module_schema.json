@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Spacelift Module Manifest",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string", "description": "The name of the module in Spacelift." },
+    "repository": { "type": "string", "description": "The name of the ADO git repository." },
+    "terraform_provider": { "type": "string", "description": "The cloud provider (e.g., 'google')." },
+    "description": { "type": "string", "description": "A human-readable description of the module's purpose." },
+    "branch": { "type": "string", "description": "The default branch for the module (usually 'main')." },
+    "vcs": {
+      "type": "object",
+      "properties": {
+        "namespace": { "type": "string", "description": "The Azure DevOps project name." }
+      },
+      "required": ["namespace"]
+    },
+    "enable_webhooks": { "type": "boolean" },
+    "disabled_webhooks": { "type": "array", "items": { "type": "string" } },
+    "additional_webhooks": { "type": "object" },
+    "additional_contexts": { "type": "array", "items": { "type": "string" } },
+    "policies": { "type": "array", "items": { "type": "string" } },
+    "administrative": { "type": "boolean" },
+    "worker_pool_id": { "type": "string" },
+    "protect_from_deletion": { "type": "boolean" },
+    "labels": { "type": "array", "items": { "type": "string" } },
+    "workflow_tool": { "type": "string", "enum": ["OPEN_TOFU", "TERRAFORM_FOSS", "CUSTOM"] },
+    "space_shares": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["name", "repository", "vcs"]
+}

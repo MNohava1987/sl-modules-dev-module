@@ -1,0 +1,11 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/sl-modules-dev-module/manifests/*.json",
+        "/sl-modules-dev-module/config/*.json"
+      ],
+      "url": "./tests/module_schema.json"
+    }
+  ]
+}

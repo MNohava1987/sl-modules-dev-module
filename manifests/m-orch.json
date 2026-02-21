@@ -1,0 +1,10 @@
+{
+  "name": "m-orch",
+  "terraform_provider": "spacelift",
+  "description": "Core Spacelift Module Orchestrator Engine",
+  "repository": "terraform-spacelift-m-orch",
+  "branch": "main",
+  "vcs": {
+    "namespace": "MNohava1987"
+  }
+}
